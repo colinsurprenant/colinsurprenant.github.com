@@ -4,7 +4,7 @@
   <title><![CDATA[Category: headhunter | Colin Surprenant]]></title>
   <link href="http://colinsurprenant.com/blog/categories/headhunter/atom.xml" rel="self"/>
   <link href="http://colinsurprenant.com/"/>
-  <updated>2012-04-20T16:08:11-04:00</updated>
+  <updated>2012-04-20T16:16:40-04:00</updated>
   <id>http://colinsurprenant.com/</id>
   <author>
     <name><![CDATA[Colin Surprenant]]></name>
@@ -20,7 +20,7 @@
     <id>http://colinsurprenant.com/blog/2012/04/20/headhunter-fail</id>
     <content type="html"><![CDATA[<p>Here my today's headhunter fail:</p>
 
-<p><img src="images/failopportunity.png" alt="headhunter fail" /></p>
+<p><img src="/images/failopportunity.png" alt="headhunter fail" /></p>
 ]]></content>
   </entry>
   
