@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Colin Surprenant]]></title>
-  <link href="http://colinsurprenant.github.com/atom.xml" rel="self"/>
-  <link href="http://colinsurprenant.github.com/"/>
-  <updated>2012-04-20T15:20:58-04:00</updated>
-  <id>http://colinsurprenant.github.com/</id>
+  <link href="http://colinsurprenant.com/atom.xml" rel="self"/>
+  <link href="http://colinsurprenant.com/"/>
+  <updated>2012-04-20T15:28:08-04:00</updated>
+  <id>http://colinsurprenant.com/</id>
   <author>
     <name><![CDATA[Colin Surprenant]]></name>
     
