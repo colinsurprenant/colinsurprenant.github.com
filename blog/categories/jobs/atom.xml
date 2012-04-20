@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Colin Surprenant]]></title>
-  <link href="http://colinsurprenant.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: jobs | Colin Surprenant]]></title>
+  <link href="http://colinsurprenant.com/blog/categories/jobs/atom.xml" rel="self"/>
   <link href="http://colinsurprenant.com/"/>
   <updated>2012-04-20T15:44:24-04:00</updated>
   <id>http://colinsurprenant.com/</id>
@@ -18,7 +18,7 @@
     <link href="http://colinsurprenant.com/blog/2012/04/20/headhunter-fail/"/>
     <updated>2012-04-20T14:17:00-04:00</updated>
     <id>http://colinsurprenant.com/blog/2012/04/20/headhunter-fail</id>
-    <content type="html"><![CDATA[<p>Here my today&#8217;s headhunter fail.
+    <content type="html"><![CDATA[<p>Here my today's headhunter fail.
 <img src="images/failopportunity.png" alt="headhunter fail" /></p>
 ]]></content>
   </entry>
