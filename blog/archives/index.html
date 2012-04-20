@@ -9,7 +9,7 @@
   <meta name="author" content="Colin Surprenant">
 
   
-  <meta name="description" content="Blog Archive Recent Posts GitHub Repos Status updating... @colinsurprenant on GitHub $.domReady(function(){ if (!window.jXHR){ var jxhr = document. &hellip;">
+  <meta name="description" content="Blog Archive Recent Posts Latest Tweets Status updating... $.domReady(function(){ getTwitterFeed("colinsurprenant", 6, true); }); Follow @ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -30,6 +30,18 @@
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-875987-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -37,7 +49,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">Colin Surprenant</a></h1>
   
-    <h2>technology/software/internet/entrepreneurship</h2>
+    <h2>technology|software|internet|entrepreneurship</h2>
   
 </hgroup>
 
@@ -89,6 +101,23 @@
 </section>
 
 <section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("colinsurprenant", 6, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/colinsurprenant" class="twitter-follow-button" data-show-count="false">Follow @colinsurprenant</a>
+  
+</section>
+
+
+<section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
     <li class="loading">Status updating...</li>
@@ -110,7 +139,8 @@
             user: 'colinsurprenant',
             count: 0,
             skip_forks: true,
-            target: '#gh_repos'
+            target: '#gh_repos',
+            ignore_repos: 'colinsurprenant.github.com, travisspec, storm-jruby, memcached-config, localforkedclone, scout-memcached-stats, bunnypunisher, qpid, fsqstalk'
         });
     });
   </script>
@@ -119,21 +149,11 @@
 
 
 <section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("colinsurprenant", 6, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/colinsurprenant" class="twitter-follow-button" data-show-count="false">Follow @colinsurprenant</a>
-  
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/colin.surprenant?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/colin.surprenant">My Delicious Bookmarks &raquo;</a></p>
 </section>
-
 
 
 
