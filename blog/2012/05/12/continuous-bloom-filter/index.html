@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Colin Surprenant</title>
+  <title>Continuous Bloom filter - Colin Surprenant</title>
   <meta name="author" content="Colin Surprenant">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://colinsurprenant.com">
+  <link rel="canonical" href="http://colinsurprenant.com/blog/2012/05/12/continuous-bloom-filter">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -75,15 +75,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/05/12/continuous-bloom-filter/">Continuous Bloom Filter</a></h1>
+      <h1 class="entry-title">Continuous Bloom Filter</h1>
     
     
       <p class="meta">
@@ -106,7 +103,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Working with large, continuous data streams has many challenges. The throughput or the quantity of data in a given time period is sometimes too high for some types of computations using traditional algorithms and data structures. In these cases <a href="http://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/">probabilistic data structures and algorithms</a> can be used to compute estimations and trade some precision for memory consumption. These probabilistic data structures are typically a much more compact alternative for stream based computing.</p>
+<div class="entry-content"><p>Working with large, continuous data streams has many challenges. The throughput or the quantity of data in a given time period is sometimes too high for some types of computations using traditional algorithms and data structures. In these cases <a href="http://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/">probabilistic data structures and algorithms</a> can be used to compute estimations and trade some precision for memory consumption. These probabilistic data structures are typically a much more compact alternative for stream based computing.</p>
 
 <p>Probably one of the most widely used probabilistic data structure is the Bloom filter. Basically a Bloom filter is used to test whether an element is member of a set in a very memory efficient way. Because of the probabilistic nature of a Bloom filter, false positives are possible (but false negatives are not). This mean testing for the inclusion of an element will report it as being part of the set when it is not, statistically within a known error rate. There are several very good articles on the suject of Bloom filters which explain in great length everything there is to know about Bloom filters.  See the references section for more info.</p>
 
@@ -154,22 +151,16 @@
 <div class="github"><a href="https://github.com/colinsurprenant/bloombroom">Blombroom on Github</a></div>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/20/headhunter-fail/">Headhunter Fail</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Colin Surprenant</span></span>
+
+      
 
 
 
@@ -181,29 +172,44 @@
   
 
 
-<time datetime="2012-04-20T14:17:00-04:00" pubdate data-updated="true">Apr 20<span>th</span>, 2012</time>
-        
-      </p>
+<time datetime="2012-05-12T11:23:00-04:00" pubdate data-updated="true">May 12<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/algorithm/'>algorithm</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>, <a class='category' href='/blog/categories/probability/'>probability</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/streaming/'>streaming</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>Today&#8217;s headhunter fail:</p>
-
-<p><img src="/images/failopportunity.png" alt="headhunter fail" /></p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://colinsurprenant.com/blog/2012/05/12/continuous-bloom-filter/" data-via="colinsurprenant" data-counturl="http://colinsurprenant.com/blog/2012/05/12/continuous-bloom-filter/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/04/20/headhunter-fail/" title="Previous Post: headhunter fail">&laquo; headhunter fail</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -224,7 +230,7 @@
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -241,7 +247,7 @@
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <iframe src="http://githubbadge.appspot.com/badge/colinsurprenant?a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe>
@@ -281,6 +287,7 @@
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -295,7 +302,10 @@
       var disqus_shortname = 'colinsurprenant';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://colinsurprenant.com/blog/2012/05/12/continuous-bloom-filter/';
+        var disqus_url = 'http://colinsurprenant.com/blog/2012/05/12/continuous-bloom-filter/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

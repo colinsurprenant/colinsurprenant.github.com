@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Colin Surprenant]]></title>
-  <link href="http://colinsurprenant.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: probability | Colin Surprenant]]></title>
+  <link href="http://colinsurprenant.com/blog/categories/probability/atom.xml" rel="self"/>
   <link href="http://colinsurprenant.com/"/>
   <updated>2012-05-12T21:37:21-04:00</updated>
   <id>http://colinsurprenant.com/</id>
@@ -35,19 +35,19 @@
 
 <h3>Continuous Filter</h3>
 
-<p>Ilya Grigorik&#8217;s post <a href="http://www.igvita.com/2010/01/06/flow-analysis-time-based-bloom-filters/">Flow Analysis &amp; Time-based Bloom Filters</a> and the <a href="http://webdocs.cs.ualberta.ca/~drafiei/papers/DupDet06Sigmod.pdf">Stable Bloom Filters</a> paper inspired this idea of a time-based <em>continuous</em> filter. Attaching a TTL to each element of the filter is a good proposal but the challenge is how to encode the TTL in a space efficient way and how to actually track time and expire elements. My target was to see if I could come up with a solution by using 4 bits or less per filter position. Ideally the number of bits must be a power of 2 to avoid padding in our bit vector. 2 bits seemed too small, leaving 4 bits as the next smallest size.</p>
+<p>Ilya Grigorik's post <a href="http://www.igvita.com/2010/01/06/flow-analysis-time-based-bloom-filters/">Flow Analysis &amp; Time-based Bloom Filters</a> and the <a href="http://webdocs.cs.ualberta.ca/~drafiei/papers/DupDet06Sigmod.pdf">Stable Bloom Filters</a> paper inspired this idea of a time-based <em>continuous</em> filter. Attaching a TTL to each element of the filter is a good proposal but the challenge is how to encode the TTL in a space efficient way and how to actually track time and expire elements. My target was to see if I could come up with a solution by using 4 bits or less per filter position. Ideally the number of bits must be a power of 2 to avoid padding in our bit vector. 2 bits seemed too small, leaving 4 bits as the next smallest size.</p>
 
 <div class="inline_image_right"><img src="http://colinsurprenant.com/images/timekeeping.png"></div>
 
 
-<p>The rotating filters idea actually lead to the idea of encoding time in a round robin clock of 15 positions, that&#8217;s the 4 bits 16 position less the 0 value reserved for the <em>unset</em> value. The internal clock resolution is set to half of the required TTL (resolution divisor of 2); the clock ticks every TTL / 2. The <em>current time</em> is the current clock tick modulo 15. The total time of our internal clock is 15 * (TTL / 2).</p>
+<p>The rotating filters idea actually lead to the idea of encoding time in a round robin clock of 15 positions, that's the 4 bits 16 position less the 0 value reserved for the <em>unset</em> value. The internal clock resolution is set to half of the required TTL (resolution divisor of 2); the clock ticks every TTL / 2. The <em>current time</em> is the current clock tick modulo 15. The total time of our internal clock is 15 * (TTL / 2).</p>
 
 <p>We keep track of TTLs by writing the current time in the key k positions when inserting in the filter. When doing a key lookup if the interval between the current time and the inserted time value (elapsed time) at any of the k position is <strong>greater than</strong> 2 (resolution divisor) we know this key is expired. Any <em>expired</em> position is reset to zero.</p>
 
 <div class="center_image"><img src="http://colinsurprenant.com/images/sequence.png"></div>
 
 
-<p>For example, in a filter using 3 hash functions, X is inserted at 4, Y inserted at 9 (overwriting one of X&#8217;s position). A lookup for X is made at 11. In two of X position, elapsed time is 11 - 4 = 7 which is longer then the resolution divisor of 2. X is reported as not found and the two expired positions are reset to zero.</p>
+<p>For example, in a filter using 3 hash functions, X is inserted at 4, Y inserted at 9 (overwriting one of X's position). A lookup for X is made at 11. In two of X position, elapsed time is 11 - 4 = 7 which is longer then the resolution divisor of 2. X is reported as not found and the two expired positions are reset to zero.</p>
 
 <p>A fast continuous Bloom filter Ruby implementation in available in the <a href="https://rubygems.org/gems/bloombroom">Bloombroom gem</a> and <a href="https://github.com/colinsurprenant/bloombroom">source code on Github</a>.</p>
 
@@ -65,17 +65,6 @@
 
 <div class="github"><a href="https://github.com/colinsurprenant/bloombroom">Blombroom on Github</a></div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[headhunter fail]]></title>
-    <link href="http://colinsurprenant.com/blog/2012/04/20/headhunter-fail/"/>
-    <updated>2012-04-20T14:17:00-04:00</updated>
-    <id>http://colinsurprenant.com/blog/2012/04/20/headhunter-fail</id>
-    <content type="html"><![CDATA[<p>Today&#8217;s headhunter fail:</p>
-
-<p><img src="http://colinsurprenant.com/images/failopportunity.png" alt="headhunter fail" /></p>
 ]]></content>
   </entry>
   
