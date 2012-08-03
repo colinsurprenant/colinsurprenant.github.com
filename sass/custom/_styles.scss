@@ -1,2 +1,36 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+body { font-size: 1em; }
+
+div.github {
+  background: #DEDEDE url(/images/github_blue_black_cat_32.png) no-repeat 1em;
+  padding: 0.75em 4em;
+  border-radius: 5px;
+}
+
+div.inline_image_right {
+  float: right;
+  margin: 10px 0px 0px 10px;
+}
+
+div.center_image {
+  display: block; 
+  text-align: center;
+}
+
+#icons a {
+  background-image: url("/images/socialmedia_icons.png");
+  background-repeat: no-repeat;
+  height:32px;
+  width:32px;
+  display:block;
+  float:left;
+  margin-right: 0.5em;
+}
+
+#icons a.linkedin {background-position:0px 0px}
+#icons a.twitter  {background-position:0px -32px}
+#icons a.google   {background-position:0px -64px}
+#icons a.github   {background-position:0px -96px}
+#icons a.email    {background-position:0px -160px}
